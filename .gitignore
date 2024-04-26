@@ -1,0 +1,17 @@
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX
+
+# Thumbnails
+._*
+
+# dotenv environment variable file
+.env
+
+# modules directory
+node_modules
+
+# Optional npm cache directory
+.npm

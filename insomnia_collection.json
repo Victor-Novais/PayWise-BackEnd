@@ -1,0 +1,544 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-10-02T19:39:46.188Z",
+  "__export_source": "insomnia.desktop.app:v8.1.0",
+  "resources": [
+    {
+      "_id": "req_7d4be7e2defe4bd08da2fc72c0f93b10",
+      "parentId": "fld_288910e6cbf643d48136fd6c11db52cd",
+      "modified": 1695572817614,
+      "created": 1695408905870,
+      "url": "{{ _.baseURL }}/dashboard",
+      "name": "Dashboard",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [{ "name": "User-Agent", "value": "insomnia/2023.5.8" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_64b27c977bda4536b8fd52f5c0e096ed', 'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1695408909357,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_288910e6cbf643d48136fd6c11db52cd",
+      "parentId": "wrk_0864dc890629492eb57bfd5773d3154d",
+      "modified": 1695408890333,
+      "created": 1695408890333,
+      "name": "Home",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1695408890333,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_0864dc890629492eb57bfd5773d3154d",
+      "parentId": null,
+      "modified": 1694558442090,
+      "created": 1694558442090,
+      "name": "Challenge",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_3d9a76d0398549658d9cec2e46bd85f9",
+      "parentId": "fld_95f069c5a82444a09dc3fc2a71ec77a0",
+      "modified": 1696275358249,
+      "created": 1695302825206,
+      "url": "{{ _.baseURL }}/charges",
+      "name": "Cadastrar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"client_id\": 1,\n  \"description\": \"Micro computador\" ,\n\t\"status\": \"pending\" ,\n  \"amount\": 14500,\n\t\"due_date\": \"2023-02-04\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_64b27c977bda4536b8fd52f5c0e096ed', 'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1695302838882,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_95f069c5a82444a09dc3fc2a71ec77a0",
+      "parentId": "wrk_0864dc890629492eb57bfd5773d3154d",
+      "modified": 1695238742700,
+      "created": 1695238742700,
+      "name": "Cobranças",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1695238742700,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_5e6ce2b3ab394b25a0168be8c0dfb50c",
+      "parentId": "fld_95f069c5a82444a09dc3fc2a71ec77a0",
+      "modified": 1696275534553,
+      "created": 1696273188518,
+      "url": "{{ _.baseURL }}/charges/2",
+      "name": "Editar",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\t\"description\": \"Micro computador\",\n\t\t\"status\": \"pending\",\n\t\t\"amount\": 14500,\n\t\t\"due_date\": \"2023-02-04\"\n\t}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_64b27c977bda4536b8fd52f5c0e096ed', 'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1695302838832,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0eec515bbfea41dbb78389ae40671f63",
+      "parentId": "fld_95f069c5a82444a09dc3fc2a71ec77a0",
+      "modified": 1696274138379,
+      "created": 1696273965902,
+      "url": "{{ _.baseURL }}/charges/1",
+      "name": "Deletar",
+      "description": "",
+      "method": "DELETE",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_64b27c977bda4536b8fd52f5c0e096ed', 'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1695302838807,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_de67579f73984bd0af66458bc401ff7f",
+      "parentId": "fld_95f069c5a82444a09dc3fc2a71ec77a0",
+      "modified": 1696275183997,
+      "created": 1695304426888,
+      "url": "{{ _.baseURL }}/charges",
+      "name": "Listar",
+      "description": "",
+      "method": "GET",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [
+        {
+          "id": "pair_653cbe486e1e4456bbb659c949684c50",
+          "name": "per_page",
+          "value": "10",
+          "description": "",
+          "disabled": false
+        },
+        {
+          "id": "pair_c6e5d4f1eeba4429a451351b5d4af0ab",
+          "name": "current_page",
+          "value": "1",
+          "description": "",
+          "disabled": false
+        }
+      ],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_64b27c977bda4536b8fd52f5c0e096ed', 'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1695302838782,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f6e7e403aa5c4b4c8805819153a513ed",
+      "parentId": "fld_6f7c2ccb02e143d0867a0655e8e97cd7",
+      "modified": 1695572952519,
+      "created": 1694725018551,
+      "url": "{{ _.baseURL }}/clients",
+      "name": "Cadastrar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n        \"name\": \"Nina Isabel da Luz\",\n        \"email\": \"nina-daluz80@dpauladecor.com.br\",\n        \"cpf\": \"51346653895\",\n        \"phone\": \"45991504560\",\n        \"zipcode\": \"85864470\",\n        \"street\": \"Rua das Guianas\",\n        \"complement\": \"Casa 2\",\n        \"neighborhood\": \"Jardim América\",\n        \"city\": \"Foz do Iguaçu\",\n        \"state\": \"PR\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_64b27c977bda4536b8fd52f5c0e096ed', 'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1694725024115,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_6f7c2ccb02e143d0867a0655e8e97cd7",
+      "parentId": "wrk_0864dc890629492eb57bfd5773d3154d",
+      "modified": 1694724960086,
+      "created": 1694724942097,
+      "name": "Clientes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1694712302658,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_0cc38a9f5b36458bb47bc8dabee195bf",
+      "parentId": "fld_6f7c2ccb02e143d0867a0655e8e97cd7",
+      "modified": 1695741464465,
+      "created": 1695300316842,
+      "url": "{{ _.baseURL }}/clients",
+      "name": "Listar",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_653cbe486e1e4456bbb659c949684c50",
+          "name": "per_page",
+          "value": "10",
+          "description": "",
+          "disabled": false
+        },
+        {
+          "id": "pair_c6e5d4f1eeba4429a451351b5d4af0ab",
+          "name": "current_page",
+          "value": "1",
+          "description": "",
+          "disabled": false
+        }
+      ],
+      "headers": [{ "name": "User-Agent", "value": "insomnia/2023.5.8" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_64b27c977bda4536b8fd52f5c0e096ed', 'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1694718666878.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b73397c3485c4742b36b66cf0228f35d",
+      "parentId": "fld_6f7c2ccb02e143d0867a0655e8e97cd7",
+      "modified": 1696274566736,
+      "created": 1696274427021,
+      "url": "{{ _.baseURL }}/clients/1",
+      "name": "Editar",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\t\t\"defaulter\": false,\n\t\t\t\"name\": \"Mariana Rosângela Larissa Carvalho\",\n\t\t\t\"email\": \"mariana_rosangela_carvalho@acaoi.com.br\",\n\t\t\t\"cpf\": \"153.254.056-67\",\n\t\t\t\"phone\": \"55991651283\",\n\t\t\t\"zipcode\": \"97060266\",\n\t\t\t\"street\": \"Rua Irmã Edite Maria\",\n\t\t\t\"complement\": \"Apto 22\",\n\t\t\t\"neighborhood\": \"Nossa Senhora Medianeira\",\n\t\t\t\"city\": \"Santa Maria\",\n\t\t\t\"state\": \"RS\",\n\t\t\t\"defaulter\": \"paid\"\n\t\t}"
+      },
+      "parameters": [
+        {
+          "id": "pair_653cbe486e1e4456bbb659c949684c50",
+          "name": "per_page",
+          "value": "10",
+          "description": "",
+          "disabled": false
+        },
+        {
+          "id": "pair_c6e5d4f1eeba4429a451351b5d4af0ab",
+          "name": "current_page",
+          "value": "1",
+          "description": "",
+          "disabled": false
+        }
+      ],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_64b27c977bda4536b8fd52f5c0e096ed', 'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1694715488260.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a00ccaaee49d4eecb568ec2fd3366b45",
+      "parentId": "fld_bfbf2536e0b446269ff6c24a4f1ee77e",
+      "modified": 1695741496074,
+      "created": 1694630377810,
+      "url": "{{ _.baseURL }}/queries/cep",
+      "name": "Endereço pelo CEP",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"cep\":\t\"58410066\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1694712309642,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_bfbf2536e0b446269ff6c24a4f1ee77e",
+      "parentId": "wrk_0864dc890629492eb57bfd5773d3154d",
+      "modified": 1694724871912,
+      "created": 1694712302558,
+      "name": "Consultas",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1694712302558,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_e8690fcbea59472ca45e17f38bd73e6b",
+      "parentId": "fld_7b88737a10894bf7953117d3871ae742",
+      "modified": 1695053551219,
+      "created": 1694565318986,
+      "url": "{{ _.baseURL }}/users/email",
+      "name": "Email existe ?",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\":\t\"eu@email.com\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1694712272262,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_7b88737a10894bf7953117d3871ae742",
+      "parentId": "wrk_0864dc890629492eb57bfd5773d3154d",
+      "modified": 1694724861423,
+      "created": 1694712267310,
+      "name": "Usuários",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1694712267310,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_04c04fdfadca4f5e96e6f74e5dd1d5b9",
+      "parentId": "fld_7b88737a10894bf7953117d3871ae742",
+      "modified": 1695260349297,
+      "created": 1694558479552,
+      "url": "{{ _.baseURL }}/users",
+      "name": "Cadastrar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\":\t\"Eu\",\n\t\"email\":\t\"eu@email.com\",\n\t\"password\":\t\"Abcd1234\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1694712272162,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_64b27c977bda4536b8fd52f5c0e096ed",
+      "parentId": "fld_7b88737a10894bf7953117d3871ae742",
+      "modified": 1696275517775,
+      "created": 1694560243262,
+      "url": "{{ _.baseURL }}/users/login",
+      "name": "Login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\":\t\"eu@email.com\",\n\t\"password\":\t\"Abcd1234\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1694712272062,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a7d5968c3f4c4768951702dfae0f8dc5",
+      "parentId": "fld_7b88737a10894bf7953117d3871ae742",
+      "modified": 1695238708274,
+      "created": 1694561652247,
+      "url": "{{ _.baseURL }}/users",
+      "name": "Editar",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\":\t\"Eu\",\n\t\"email\":\t\"eu@email.com\",\n\t\"cpf\": \"04529995020\",\n\t\"phone\":\t\"(11) 9 9999-9999\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/2023.5.8" }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_64b27c977bda4536b8fd52f5c0e096ed', 'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1694712271962,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_7deb1a2926bde3b1cbfdd7896ce4afe9834dc316",
+      "parentId": "wrk_0864dc890629492eb57bfd5773d3154d",
+      "modified": 1695408957340,
+      "created": 1694558442101,
+      "name": "Base Environment",
+      "data": { "baseURL": "http://localhost:3000/v1" },
+      "dataPropertyOrder": { "&": ["baseURL"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1694558442101,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_7deb1a2926bde3b1cbfdd7896ce4afe9834dc316",
+      "parentId": "wrk_0864dc890629492eb57bfd5773d3154d",
+      "modified": 1694558442102,
+      "created": 1694558442102,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "env_11a6885664ca420c8f6e3b19d9447e6a",
+      "parentId": "env_7deb1a2926bde3b1cbfdd7896ce4afe9834dc316",
+      "modified": 1695408972948,
+      "created": 1694730326223,
+      "name": "New Environment",
+      "data": { "baseURL": "https://api.devocupados.gledsonlp.dev/v1" },
+      "dataPropertyOrder": { "&": ["baseURL"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1694730326230,
+      "_type": "environment"
+    }
+  ]
+}
